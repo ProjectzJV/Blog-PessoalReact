@@ -1,12 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
+import Navbar from './components/estaticos/navbar/Navbar';
+import Footer from './components/estaticos/footer/Footer';
+import {Grid} from '@mui/material';
 import './App.css';
 import Home from './pages/home/Home';
 
 function App() {
   return (
-    <Home />
-  );
+    <>
+      <Navbar />
+      <Home />
+      <Footer />
+    </>
+    );
 }
 
 export default App;
