@@ -4,38 +4,38 @@ import React from 'react';
 function Navbar(){
     return(
         <>
-        <AppBar position="static">
+        <AppBar position="static" style={{backgroundColor: "#1a8226"}}>
                 <Toolbar variant="dense">
-                    <Box style={{ cursor: "pointer" }} >
-                        <Typography variant="h5" color="inherit">
-                            BlogPessoal
+                    <Box style={{ cursor: "pointer"}} >
+                        <Typography variant="h4" color="inherit">
+                            Blog-Pessoal
                         </Typography>
                     </Box>
 
                     <Box display="flex" justifyContent="start">
                         <Box mx={1} style={{ cursor: "pointer" }}>
                             <Typography variant="h6" color="inherit">
-                                home
+                                Home
                             </Typography>
                         </Box>
                         <Box mx={1} style={{ cursor: "pointer" }}>
                             <Typography variant="h6" color="inherit">
-                                postagens
+                                Postagens
                             </Typography>
                         </Box>
                         <Box mx={1} style={{ cursor: "pointer" }}>
                             <Typography variant="h6" color="inherit">
-                                temas
+                                Temas
                             </Typography>
                         </Box>
                         <Box mx={1} style={{ cursor: "pointer" }}>
                             <Typography variant="h6" color="inherit">
-                                cadastrar tema
+                                Cadastrar Tema
                             </Typography>
                         </Box>
                         <Box mx={1} style={{ cursor: "pointer" }}>
                             <Typography variant="h6" color="inherit">
-                                logout
+                                Logout
                             </Typography>
                         </Box>
                     </Box>
