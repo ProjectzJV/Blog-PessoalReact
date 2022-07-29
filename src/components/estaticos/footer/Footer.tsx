@@ -12,25 +12,25 @@ function Footer() {
                 <Grid alignItems="center" item xs={12}>
                     <Box className='box1'>
                         <Box paddingTop={1} display="flex" alignItems="center" justifyContent="center">
-                            <Typography variant="h5" align="center" gutterBottom className='textos'>Siga-nos nas redes sociais </Typography>
+                              <Typography variant="h5" align="center" gutterBottom className='textos'>Siga-nos nas redes sociais </Typography>
                         </Box>
                         <Box display="flex" alignItems="center" justifyContent="center">
                             <a href="https://www.instagram.com/generationbrasil/" target="_blank" rel="noopener noreferrer">
-                                <InstagramIcon className='redes' />
+                                <InstagramIcon className= 'redes' />
                             </a>
 
-                            <a href="https://www.facebook.com/generationbrasil" target="_blank" rel="noopener noreferrer">
-                                <FacebookIcon className='redes' />
+                            <a href="https://www.facebook.com/generationbrasil" target="_blank">
+                                <FacebookIcon className= 'redes' />
                             </a>
 
                             <a href="https://www.linkedin.com/school/generationbrasil/" target="_blank" rel="noopener noreferrer">
-                                <LinkedInIcon className='redes' />
+                                <LinkedInIcon className= 'redes' />
                             </a>
                         </Box>
                     </Box>
                     <Box className='box2'>
                         <Box paddingTop={1}>
-                            <Typography variant="subtitle2" align="center" gutterBottom className='textos' >©2022 Copyright:</Typography>
+                            <Typography variant="subtitle2" align="center" gutterBottom className='textos' >© 2022 Copyright:</Typography>
                         </Box>
                         <Box>
                             <a target="_blank" href="https://brasil.generation.org" rel="noopener noreferrer">
