@@ -1,5 +1,6 @@
 import React from 'react';
 import {Typography, Box, Grid, Button} from '@mui/material';
+import TabPostagem from '../../components/postagens/tabpostagem/TabPostagem';
 import './Home.css';
 
 function Home() {
@@ -21,6 +22,7 @@ function Home() {
                     <img src="https://cdn.mensagenscomamor.com/content/images/m000573887.jpg?v=1&w=1080&h=1080" alt="" width="500px" height="500px" />
                 </Grid>
                 <Grid xs={12} className='postagens'>
+                    <TabPostagem />
                 </Grid>
             </Grid>
     </> 
