@@ -79,9 +79,6 @@ function CadastroUsuario() {
                     </form>
                 </Box>
             </Grid>
-
-
-
         </Grid>
     );
 }

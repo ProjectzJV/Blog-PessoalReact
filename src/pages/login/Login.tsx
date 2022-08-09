@@ -4,14 +4,16 @@ import { Typography, Grid, Button } from '@material-ui/core';
 import { Box } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 import { Api } from '@mui/icons-material';
-import userLocalStorage from 'react-use-localstorage';
 import UserLogin from '../../models/UserLogin';
 import './Login.css';
 import { login } from '../../services/Service';
+import { useDispatch, useSelector } from 'react-redux';
+import { addToken } from '../../store/tokens/Actions';
 
 function Login() {
     let history = useNavigate();
-    const [token, setToken] = userLocalStorage('token');
+    const dispatch = useDispatch();
+    const [token, setToken] = useState('');
     const [userLogin, setUserLogin] = useState<UserLogin>(
         {
             id: 0,
@@ -31,6 +33,7 @@ function Login() {
 
     useEffect(() => {
         if (token != '') {
+            dispatch(addToken(token));
             history('/home')
         }
     }, [token])
@@ -69,7 +72,6 @@ function Login() {
                         <Link to='/cadastrousuario'>
                             <Typography variant='subtitle1' gutterBottom align='center' className='textos1'>Cadastra-se</Typography>
                         </Link>
-
                     </Box>
                 </Box>
             </Grid>
