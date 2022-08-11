@@ -7,6 +7,7 @@ import useLocalStorage from 'react-use-localstorage';
 import { findByTestId } from '@testing-library/react';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/TokensReduces';
+import {toast} from 'react-toastify';
 
 
 function CadastroTema() {
@@ -22,7 +23,15 @@ function CadastroTema() {
 
     useEffect(()=>{
         if (token == ''){
-            alert("Você precisa estar logado")
+            toast.error('Você precisa estar logado!', {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                });
             history('/login')
         }
     },[token])
@@ -60,14 +69,30 @@ function CadastroTema() {
                     'Authorization': token
                 }
             })
-            alert('Tema atualizado com sucesso');
+            toast.success('Tema atualizado com sucesso!', {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                });
         } else {
             post(`/temas`, tema, setTema, {
                 headers: {
                     'Authorization': token
                 }
             })
-            alert('Tema cadastrado com sucesso');
+            toast.success('Tema cadastrado com sucesso!', {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                });
         }
         back()
 
